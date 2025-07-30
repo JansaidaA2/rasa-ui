@@ -250,7 +250,7 @@
 
     const translatedMsg = await translate(message, selectedLang);
 
-    fetch("http://13.203.79.224:5005/webhooks/rest/webhook", {
+    fetch("https://cors-anywhere.herokuapp.com/http://13.203.79.224:5005/webhooks/rest/webhook", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ sender: "user", message: translatedMsg }),
